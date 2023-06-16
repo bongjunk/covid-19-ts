@@ -1,194 +1,183 @@
-{
-  "resultCode": "0",
-  "resultMessage": "정상 처리되었습니다.",
-  "korea": {
-    "countryName": "합계",
-    "newCase": "2,028",
-    "totalCase": "323,379",
-    "recovered": "287,040",
-    "death": "2,536",
-    "percentage": "623.93",
-    "newCcase": "2,002",
-    "newFcase": "26"
-  },
-  "seoul": {
-    "countryName": "서울",
-    "newCase": "690",
-    "totalCase": "104,723",
-    "recovered": "89,560",
-    "death": "666",
-    "percentage": "1083.14",
-    "newCcase": "685",
-    "newFcase": "5"
-  },
-  "busan": {
-    "countryName": "부산",
-    "newCase": "38",
-    "totalCase": "12,964",
-    "recovered": "12,310",
-    "death": "155",
-    "percentage": "382.20",
-    "newCcase": "38",
-    "newFcase": "0"
-  },
-  "daegu": {
-    "countryName": "대구",
-    "newCase": "64",
-    "totalCase": "15,904",
-    "recovered": "14,732",
-    "death": "243",
-    "percentage": "657.64",
-    "newCcase": "64",
-    "newFcase": "0"
-  },
-  "incheon": {
-    "countryName": "인천",
-    "newCase": "133",
-    "totalCase": "16,564",
-    "recovered": "14,763",
-    "death": "90",
-    "percentage": "562.86",
-    "newCcase": "130",
-    "newFcase": "3"
-  },
-  "gwangju": {
-    "countryName": "광주",
-    "newCase": "16",
-    "totalCase": "5,108",
-    "recovered": "4,842",
-    "death": "29",
-    "percentage": "352.26",
-    "newCcase": "16",
-    "newFcase": "0"
-  },
-  "daejeon": {
-    "countryName": "대전",
-    "newCase": "31",
-    "totalCase": "7,207",
-    "recovered": "6,678",
-    "death": "49",
-    "percentage": "492.32",
-    "newCcase": "31",
-    "newFcase": "0"
-  },
-  "ulsan": {
-    "countryName": "울산",
-    "newCase": "4",
-    "totalCase": "5,247",
-    "recovered": "5,019",
-    "death": "55",
-    "percentage": "461.88",
-    "newCcase": "4",
-    "newFcase": "0"
-  },
-  "sejong": {
-    "countryName": "세종",
-    "newCase": "5",
-    "totalCase": "1,283",
-    "recovered": "1,198",
-    "death": "1",
-    "percentage": "360.56",
-    "newCcase": "5",
-    "newFcase": "0"
-  },
-  "gyeonggi": {
-    "countryName": "경기",
-    "newCase": "685",
-    "totalCase": "94,107",
-    "recovered": "82,437",
-    "death": "821",
-    "percentage": "700.88",
-    "newCcase": "680",
-    "newFcase": "5"
-  },
-  "gangwon": {
-    "countryName": "강원",
-    "newCase": "31",
-    "totalCase": "6,664",
-    "recovered": "6,218",
-    "death": "63",
-    "percentage": "431.93",
-    "newCcase": "31",
-    "newFcase": "0"
-  },
-  "chungbuk": {
-    "countryName": "충북",
-    "newCase": "38",
-    "totalCase": "6,613",
-    "recovered": "5,971",
-    "death": "79",
-    "percentage": "413.10",
-    "newCcase": "38",
-    "newFcase": "0"
-  },
-  "chungnam": {
-    "countryName": "충남",
-    "newCase": "69",
-    "totalCase": "9,433",
-    "recovered": "8,444",
-    "death": "58",
-    "percentage": "444.74",
-    "newCcase": "68",
-    "newFcase": "1"
-  },
-  "jeonbuk": {
-    "countryName": "전북",
-    "newCase": "20",
-    "totalCase": "4,663",
-    "recovered": "4,261",
-    "death": "61",
-    "percentage": "258.47",
-    "newCcase": "20",
-    "newFcase": "0"
-  },
-  "jeonnam": {
-    "countryName": "전남",
-    "newCase": "13",
-    "totalCase": "3,199",
-    "recovered": "2,951",
-    "death": "21",
-    "percentage": "172.77",
-    "newCcase": "12",
-    "newFcase": "1"
-  },
-  "gyeongbuk": {
-    "countryName": "경북",
-    "newCase": "55",
-    "totalCase": "8,708",
-    "recovered": "7,870",
-    "death": "91",
-    "percentage": "329.92",
-    "newCcase": "55",
-    "newFcase": "0"
-  },
-  "gyeongnam": {
-    "countryName": "경남",
-    "newCase": "120",
-    "totalCase": "11,939",
-    "recovered": "11,012",
-    "death": "37",
-    "percentage": "357.43",
-    "newCcase": "120",
-    "newFcase": "0"
-  },
-  "jeju": {
-    "countryName": "제주",
-    "newCase": "5",
-    "totalCase": "2,914",
-    "recovered": "2,832",
-    "death": "2",
-    "percentage": "431.94",
-    "newCcase": "5",
-    "newFcase": "0"
-  },
-  "quarantine": {
-    "countryName": "검역",
-    "newCase": "11",
-    "totalCase": "6,139",
-    "recovered": "5,942",
-    "death": "15",
-    "percentage": "-",
-    "newCcase": "0",
-    "newFcase": "11"
+[
+  {
+    "API": {
+      "apiName": "Corona-19-API-국내-발생현황",
+      "updateTime": "코로나19 국내 발생현황(2023년 06.15. 00시 기준)",
+      "dataSource": "Goodbye-Corona-Bot-V2",
+      "resultCode": "200",
+      "resultMessage": "정상 처리되었습니다.",
+      "deathPcnt": 0.11
+    },
+    "korea": {
+      "countryNm": "합계",
+      "totalCnt": 31963621,
+      "deathCnt": 34937,
+      "qurRate": 62139,
+      "incDec": 17428,
+      "incDecK": 17406,
+      "incDecF": 22
+    },
+    "seoul": {
+      "countryNm": "서울",
+      "totalCnt": 6261581,
+      "deathCnt": 6520,
+      "qurRate": 66412,
+      "incDec": 3722,
+      "incDecK": 3722,
+      "incDecF": 0
+    },
+    "busan": {
+      "countryNm": "부산",
+      "totalCnt": 1889276,
+      "deathCnt": 2860,
+      "qurRate": 56943,
+      "incDec": 1499,
+      "incDecK": 1499,
+      "incDecF": 0
+    },
+    "daegu": {
+      "countryNm": "대구",
+      "totalCnt": 1387840,
+      "deathCnt": 2027,
+      "qurRate": 58715,
+      "incDec": 776,
+      "incDecK": 773,
+      "incDecF": 3
+    },
+    "incheon": {
+      "countryNm": "인천",
+      "totalCnt": 1857275,
+      "deathCnt": 1930,
+      "qurRate": 62591,
+      "incDec": 884,
+      "incDecK": 883,
+      "incDecF": 1
+    },
+    "gwangju": {
+      "countryNm": "광주",
+      "totalCnt": 931630,
+      "deathCnt": 835,
+      "qurRate": 65101,
+      "incDec": 654,
+      "incDecK": 654,
+      "incDecF": 0
+    },
+    "daejeon": {
+      "countryNm": "대전",
+      "totalCnt": 932384,
+      "deathCnt": 964,
+      "qurRate": 64477,
+      "incDec": 393,
+      "incDecK": 393,
+      "incDecF": 0
+    },
+    "ulsan": {
+      "countryNm": "울산",
+      "totalCnt": 676177,
+      "deathCnt": 538,
+      "qurRate": 60880,
+      "incDec": 442,
+      "incDecK": 440,
+      "incDecF": 2
+    },
+    "sejong": {
+      "countryNm": "세종",
+      "totalCnt": 253976,
+      "deathCnt": 57,
+      "qurRate": 66210,
+      "incDec": 133,
+      "incDecK": 133,
+      "incDecF": 0
+    },
+    "gyeonggi": {
+      "countryNm": "경기",
+      "totalCnt": 8648647,
+      "deathCnt": 8492,
+      "qurRate": 63642,
+      "incDec": 4164,
+      "incDecK": 4162,
+      "incDecF": 2
+    },
+    "gangwon": {
+      "countryNm": "강원",
+      "totalCnt": 934855,
+      "deathCnt": 1358,
+      "qurRate": 60843,
+      "incDec": 450,
+      "incDecK": 449,
+      "incDecF": 1
+    },
+    "chungbuk": {
+      "countryNm": "충북",
+      "totalCnt": 1000471,
+      "deathCnt": 1056,
+      "qurRate": 62723,
+      "incDec": 402,
+      "incDecK": 402,
+      "incDecF": 0
+    },
+    "chungnam": {
+      "countryNm": "충남",
+      "totalCnt": 1289640,
+      "deathCnt": 1608,
+      "qurRate": 60745,
+      "incDec": 656,
+      "incDecK": 656,
+      "incDecF": 0
+    },
+    "jeonbuk": {
+      "countryNm": "전북",
+      "totalCnt": 1071461,
+      "deathCnt": 1246,
+      "qurRate": 60548,
+      "incDec": 490,
+      "incDecK": 490,
+      "incDecF": 0
+    },
+    "jeonnam": {
+      "countryNm": "전남",
+      "totalCnt": 1044833,
+      "deathCnt": 1024,
+      "qurRate": 57481,
+      "incDec": 485,
+      "incDecK": 484,
+      "incDecF": 1
+    },
+    "gyeongbuk": {
+      "countryNm": "경북",
+      "totalCnt": 1454061,
+      "deathCnt": 2121,
+      "qurRate": 55915,
+      "incDec": 719,
+      "incDecK": 719,
+      "incDecF": 0
+    },
+    "gyeongnam": {
+      "countryNm": "경남",
+      "totalCnt": 1901952,
+      "deathCnt": 2000,
+      "qurRate": 57978,
+      "incDec": 1101,
+      "incDecK": 1099,
+      "incDecF": 2
+    },
+    "jeju": {
+      "countryNm": "제주",
+      "totalCnt": 408915,
+      "deathCnt": 285,
+      "qurRate": 60298,
+      "incDec": 450,
+      "incDecK": 448,
+      "incDecF": 2
+    },
+    "quarantine": {
+      "countryNm": "검역",
+      "totalCnt": 18647,
+      "deathCnt": 16,
+      "qurRate": 0,
+      "incDec": 8,
+      "incDecK": 0,
+      "incDecF": 8
+    }
   }
-}
+]
