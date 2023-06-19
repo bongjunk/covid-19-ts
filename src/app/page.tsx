@@ -128,7 +128,6 @@ export default function Home() {
                   className="border bg-white w-48 px-2 py-2"
                 >
                   {region?.map((el: string | any, idx: number) => {
-                    console.log('el', el, 'idx', idx);
                     return (
                       <option key={idx} value={el.en}>
                         {el.kr}
