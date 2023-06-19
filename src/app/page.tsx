@@ -40,8 +40,11 @@ export default function Home() {
   const title = corona.map((el: any) => el.API.apiName);
   const updateTime = corona.map((el: any) => el.API.updateTime);
   const total = corona.map((el: any) => el.korea.totalCnt);
+  const today = province['korea'].newCase;
   const qur = corona.map((el: any) => el.korea.qurRate);
   const death = corona.map((el: any) => el.korea.deathCnt);
+  const cCase = province['korea'].newCcase;
+  const fCase = province['korea'].newFcase;
 
   const areaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
@@ -108,13 +111,13 @@ export default function Home() {
               </tr>
               <tr className="h-10 mt-4 bg-gray-100">
                 <td className="border-2 w-[33%]">
-                  <p className="text-[0.9rem]">일일확진자({numReg(total)})</p>
+                  <p className="text-[0.9rem]">일일확진자({numReg(today)})</p>
                 </td>
                 <td className="border-2 w-[33%]">
-                  <p className="text-[0.9rem]">국내발생({numReg(qur)})</p>
+                  <p className="text-[0.9rem]">국내발생({numReg(cCase)})</p>
                 </td>
                 <td className="border-2 w-[33%]">
-                  <p className="text-[0.9rem]">해외유입({numReg(death)})</p>
+                  <p className="text-[0.9rem]">해외유입({numReg(fCase)})</p>
                 </td>
               </tr>
             </tbody>
