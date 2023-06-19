@@ -88,7 +88,7 @@ export default function Home() {
         <div className="w-full h-20 bg-[#4D4BE9] flex items-center justify-center">
           <h1 className="text-white text-[1.5rem]">{title}</h1>
         </div>
-        <div className="px-[7.75rem]">
+        <div className="desktop:px-[7.75rem] tablet:px-[5rem] mobile:px-[2.5rem]">
           <div className="mt-16">
             <h2 className="font-bold text-[1.3rem] mb-3">국내현황</h2>
             <p className="text-[0.9rem]">{updateTime}</p>
@@ -127,7 +127,8 @@ export default function Home() {
                   onChange={areaChange}
                   className="border bg-white w-48 px-2 py-2"
                 >
-                  {region?.map((el: string, idx: number) => {
+                  {region?.map((el: string | any, idx: number) => {
+                    console.log('el', el, 'idx', idx);
                     return (
                       <option key={idx} value={el.en}>
                         {el.kr}
@@ -142,7 +143,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <div className="w-full">
                   <p className="font-bold text-3xl">
-                    {province[city]?.countryName}
+                    {province[city as keyof typeof province]?.countryName}
                   </p>
                   <table className="w-full">
                     <thead>
@@ -164,17 +165,20 @@ export default function Home() {
                     <tbody>
                       <tr>
                         <td className="border border-black p-2">
-                          {province[city]?.totalCase}명 (+
-                          {province[city]?.newCase})
+                          {province[city as keyof typeof province]?.totalCase}명
+                          (+
+                          {province[city as keyof typeof province]?.newCase})
                         </td>
                         <td className="border border-black p-2">
-                          {province[city]?.recovered}명
+                          {province[city as keyof typeof province]?.recovered}명
                         </td>
                         <td className="border border-black p-2">
-                          {province[city]?.death}명
+                          {province[city as keyof typeof province]?.death}명
                         </td>
                         <td className="border border-black p-2">
-                          {numReg(province[city]?.percentage)}
+                          {numReg(
+                            province[city as keyof typeof province]?.percentage,
+                          )}
                         </td>
                       </tr>
                     </tbody>
@@ -182,7 +186,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="text-center w-full h-[500px]">
+            <div className="text-center w-full h-[500px] my-10">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   width={500}
