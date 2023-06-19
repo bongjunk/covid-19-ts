@@ -1,36 +1,41 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import corona from '../../public/assets/data/domestic.json';
 import province from '../../public/assets/data/data.json';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
 export default function Home() {
+  const [data, setData] = useState<any>();
+  const [city, setCity] = useState<string>('korea');
+  const region: any[] = [];
+
   const numReg = (num: number | any) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
-  const region: string[] = [];
+  for (const key in province) {
+    region.push({
+      kr: province[key as keyof typeof province].countryName,
+      en: key,
+    });
+  }
 
-  Object.keys(province) && region.push(...Object.keys(province));
-
-  console.log('region', region);
-
-  region.map((el: string | any) => {
-    // const ell: Record<string, number> = province[el];
-    console.log('province[el]', province[el].countryName);
-    console.log('el', el);
-  });
-
-  // for (let key in province) {
-  //   province[key]
-  // }
-
-  // for (let key in province) {
-  //   if (province[key].countryName !== un defined) {
-  //     areaName.push({
-  //       "kr": province[key].countryName,
-  //       "en": key
-  //     })
-  //   }
-  // }
+  // region.map((el: string) => {
+  //   // const ell: Record<string, number> = province[el];
+  //   // const name = <T extends object, U extends key of T>(key) => (obj:T ) => obj[key];
+  //   const reg = province[el as keyof typeof province].countryName;
+  //   options.push(reg);
+  // });
 
   const title = corona.map((el: any) => el.API.apiName);
   const updateTime = corona.map((el: any) => el.API.updateTime);
@@ -38,11 +43,45 @@ export default function Home() {
   const qur = corona.map((el: any) => el.korea.qurRate);
   const death = corona.map((el: any) => el.korea.deathCnt);
 
-  const areaChange = () => {
-    console.log('123213');
+  const areaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { value } = e.target;
+    setCity(value);
   };
 
-  console.log('title', title);
+  useEffect(() => {
+    const totalCase = parseInt(
+      province[city as keyof typeof province].totalCase.replaceAll(',', ''),
+    );
+    const newCase = province[city as keyof typeof province].newCase;
+    const recovered = parseInt(
+      province[city as keyof typeof province].recovered.replaceAll(',', ''),
+    );
+    const death = parseInt(
+      province[city as keyof typeof province].death.replaceAll(',', ''),
+    );
+    const percentage = province[city as keyof typeof province].percentage;
+
+    setData([
+      {
+        name: '확진자',
+        인원: totalCase,
+        추가: newCase,
+      },
+      {
+        name: '완치자',
+        인원: recovered,
+      },
+      {
+        name: '사망자',
+        인원: death,
+      },
+      {
+        name: '발생률',
+        인원: percentage,
+      },
+    ]);
+  }, [city]);
+
   return (
     <>
       <article className="w-full h-full">
@@ -80,10 +119,91 @@ export default function Home() {
               </tr>
             </tbody>
           </table>
-          <div className="mt-40">
+          <div className="w-full mt-40 text-center">
             <h2 className="font-bold text-[1.3rem] mb-3">지역현황</h2>
-            <div className=" bg-gray-100 py-5">
-              <p>※ 원하시는 지역을 선택해주세요.</p>
+            <div className="border-2 bg-gray-100 p-14">
+              <div>
+                <select
+                  onChange={areaChange}
+                  className="border bg-white w-48 px-2 py-2"
+                >
+                  {region?.map((el: string, idx: number) => {
+                    return (
+                      <option key={idx} value={el.en}>
+                        {el.kr}
+                      </option>
+                    );
+                  })}
+                </select>
+                <p className="mt-1 mb-5 text-sm">
+                  ※ 원하시는 지역을 선택해주세요.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <div className="w-full">
+                  <p className="font-bold text-3xl">
+                    {province[city]?.countryName}
+                  </p>
+                  <table className="w-full">
+                    <thead>
+                      <tr>
+                        <td className="border border-black font-bold py-2 px-10 w-[25%]">
+                          확진자
+                        </td>
+                        <td className="border border-black font-bold py-2 px-10 w-[25%]">
+                          완치자
+                        </td>
+                        <td className="border border-black font-bold py-2 px-10 w-[25%]">
+                          사망자
+                        </td>
+                        <td className="border border-black font-bold py-2 px-10 w-[25%]">
+                          발생률
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-black p-2">
+                          {province[city]?.totalCase}명 (+
+                          {province[city]?.newCase})
+                        </td>
+                        <td className="border border-black p-2">
+                          {province[city]?.recovered}명
+                        </td>
+                        <td className="border border-black p-2">
+                          {province[city]?.death}명
+                        </td>
+                        <td className="border border-black p-2">
+                          {numReg(province[city]?.percentage)}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div className="text-center w-full h-[500px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  width={500}
+                  height={300}
+                  data={data}
+                  margin={{
+                    top: 20,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="인원" stackId="a" fill="#82ca9d" />
+                  <Bar dataKey="추가" stackId="a" fill="#8884d8" />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
           </div>
         </div>
@@ -91,13 +211,3 @@ export default function Home() {
     </>
   );
 }
-
-// <select onChange={() => areaChange()}>
-//   {corona.map((el) => {
-//     return (
-//       <option key={el.} value={el.}>
-//         {el.kr}
-//       </option>
-//     );
-//   })}
-// </select>
