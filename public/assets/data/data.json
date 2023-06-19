@@ -1,0 +1,192 @@
+{
+  "korea": {
+    "countryName": "합계",
+    "newCase": "16,493",
+    "totalCase": "31,980,114",
+    "recovered": "0",
+    "death": "34,949",
+    "percentage": "62171",
+    "newCcase": "16,479",
+    "newFcase": "14"
+  },
+  "seoul": {
+    "countryName": "서울",
+    "newCase": "3,550",
+    "totalCase": "6,265,131",
+    "recovered": "0",
+    "death": "6,524",
+    "percentage": "66450",
+    "newCcase": "3,550",
+    "newFcase": "0"
+  },
+  "busan": {
+    "countryName": "부산",
+    "newCase": "1,552",
+    "totalCase": "1,890,828",
+    "recovered": "0",
+    "death": "2,861",
+    "percentage": "56990",
+    "newCcase": "1,551",
+    "newFcase": "1"
+  },
+  "daegu": {
+    "countryName": "대구",
+    "newCase": "714",
+    "totalCase": "1,388,554",
+    "recovered": "0",
+    "death": "2,027",
+    "percentage": "58745",
+    "newCcase": "711",
+    "newFcase": "3"
+  },
+  "incheon": {
+    "countryName": "인천",
+    "newCase": "817",
+    "totalCase": "1,858,092",
+    "recovered": "0",
+    "death": "1,931",
+    "percentage": "62619",
+    "newCcase": "815",
+    "newFcase": "2"
+  },
+  "gwangju": {
+    "countryName": "광주",
+    "newCase": "549",
+    "totalCase": "932,179",
+    "recovered": "0",
+    "death": "835",
+    "percentage": "65140",
+    "newCcase": "549",
+    "newFcase": "0"
+  },
+  "daejeon": {
+    "countryName": "대전",
+    "newCase": "397",
+    "totalCase": "932,781",
+    "recovered": "0",
+    "death": "964",
+    "percentage": "64504",
+    "newCcase": "396",
+    "newFcase": "1"
+  },
+  "ulsan": {
+    "countryName": "울산",
+    "newCase": "426",
+    "totalCase": "676,603",
+    "recovered": "0",
+    "death": "538",
+    "percentage": "60919",
+    "newCcase": "426",
+    "newFcase": "0"
+  },
+  "sejong": {
+    "countryName": "세종",
+    "newCase": "147",
+    "totalCase": "254,123",
+    "recovered": "0",
+    "death": "57",
+    "percentage": "66248",
+    "newCcase": "147",
+    "newFcase": "0"
+  },
+  "gyeonggi": {
+    "countryName": "경기",
+    "newCase": "3,914",
+    "totalCase": "8,652,561",
+    "recovered": "0",
+    "death": "8,492",
+    "percentage": "63671",
+    "newCcase": "3,913",
+    "newFcase": "1"
+  },
+  "gangwon": {
+    "countryName": "강원",
+    "newCase": "389",
+    "totalCase": "935,244",
+    "recovered": "0",
+    "death": "1,359",
+    "percentage": "60869",
+    "newCcase": "387",
+    "newFcase": "2"
+  },
+  "chungbuk": {
+    "countryName": "충북",
+    "newCase": "356",
+    "totalCase": "1,000,827",
+    "recovered": "0",
+    "death": "1,056",
+    "percentage": "62745",
+    "newCcase": "356",
+    "newFcase": "0"
+  },
+  "chungnam": {
+    "countryName": "충남",
+    "newCase": "574",
+    "totalCase": "1,290,214",
+    "recovered": "0",
+    "death": "1,608",
+    "percentage": "60772",
+    "newCcase": "574",
+    "newFcase": "0"
+  },
+  "jeonbuk": {
+    "countryName": "전북",
+    "newCase": "490",
+    "totalCase": "1,071,951",
+    "recovered": "0",
+    "death": "1,247",
+    "percentage": "60576",
+    "newCcase": "490",
+    "newFcase": "0"
+  },
+  "jeonnam": {
+    "countryName": "전남",
+    "newCase": "472",
+    "totalCase": "1,045,305",
+    "recovered": "0",
+    "death": "1,024",
+    "percentage": "57507",
+    "newCcase": "472",
+    "newFcase": "0"
+  },
+  "gyeongbuk": {
+    "countryName": "경북",
+    "newCase": "645",
+    "totalCase": "1,454,706",
+    "recovered": "0",
+    "death": "2,121",
+    "percentage": "55940",
+    "newCcase": "644",
+    "newFcase": "1"
+  },
+  "gyeongnam": {
+    "countryName": "경남",
+    "newCase": "1,053",
+    "totalCase": "1,903,005",
+    "recovered": "0",
+    "death": "2,000",
+    "percentage": "58010",
+    "newCcase": "1,053",
+    "newFcase": "0"
+  },
+  "jeju": {
+    "countryName": "제주",
+    "newCase": "445",
+    "totalCase": "409,360",
+    "recovered": "0",
+    "death": "289",
+    "percentage": "60363",
+    "newCcase": "445",
+    "newFcase": "0"
+  },
+  "quarantine": {
+    "countryName": "검역",
+    "newCase": "3",
+    "totalCase": "18,650",
+    "recovered": "0",
+    "death": "16",
+    "percentage": "-",
+    "newCcase": "0",
+    "newFcase": "3"
+  }
+}
